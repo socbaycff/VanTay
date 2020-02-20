@@ -31,13 +31,15 @@ class MainActivity : AppCompatActivity() {
             }
 
             override fun onAuthenticationSucceeded(result: BiometricPrompt.AuthenticationResult) {
-                val intent = Intent(this@MainActivity, Main2Activity::class.java)
-                startActivity(intent)
+                startActivity(Intent(this@MainActivity, Main2Activity::class.java))
             }
 
             override fun onAuthenticationFailed() {
                 Toast.makeText(this@MainActivity, "onAuthenticationFailed",
                     Toast.LENGTH_SHORT).show()
+
+
+
             }
         }
 
